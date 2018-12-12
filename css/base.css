@@ -106,6 +106,13 @@ div.footer {
   display: flex;
   width: 100%;
 }
+div.footer span.line {
+  height: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+  color: white;
+  margin: 0 3px;
+}
 div.footer img.logo {
   height: 16px;
   margin: 0 3px;
@@ -114,12 +121,13 @@ div.main-container {
   height: calc(100% - 40px);
   overflow: scroll;
 }
-div.member-container {
+div.section-container {
   position: relative;
   width: 100%;
   color: white;
 }
-div.member-container div.title {
+div.section-container div.title {
+  font-family: 'jphuaifangti1646d1809517b98', serif;
   font-size: 20px;
   width: 100%;
   background: white;
@@ -128,37 +136,37 @@ div.member-container div.title {
   padding: 10px 0;
   margin-bottom: 10px;
 }
-div.member-container div.title span.eng {
+div.section-container div.title span.eng {
   font-family: 'COCOGOOSE', serif;
   margin-left: 10px;
 }
-div.member-container div.member-box div.time {
+div.section-container div.item div.time {
   font-family: 'COCOGOOSE', serif;
   border-left: 3px solid white;
   padding-left: 10px;
   margin-bottom: 10px;
 }
-div.member-container div.member-box div.member-list {
+div.section-container div.item div.member-list {
   font-size: 0;
 }
-div.member-container div.member-box div.member-list div.member-item {
+div.section-container div.item div.member-list div.member-item {
   display: inline-block;
   margin-bottom: 10px;
   width: 33.33%;
   text-align: center;
 }
-div.member-container div.member-box div.member-list div.member-item div.avatar {
+div.section-container div.item div.member-list div.member-item div.avatar {
   width: 60px;
   height: 60px;
   border-radius: 30px;
 }
-div.member-container div.member-box div.member-list div.member-item div.name {
+div.section-container div.item div.member-list div.member-item div.name {
   margin-top: 10px;
   width: 100%;
   text-align: center;
   font-size: 14px;
 }
-div.member-container div.member-box div.member-list div.secret {
+div.section-container div.item div.member-list div.secret {
   margin-bottom: 10px;
   margin-left: 10px;
   font-size: 14px;
