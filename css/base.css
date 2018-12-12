@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  height: 100%;
+  min-height: 568px;
+  overflow: scroll;
+  width: 100%;
+  min-width: 375px;
+}
+.center-container {
+  position: absolute;
+  height: 100%;
+  min-height: 568px;
+  max-height: 812px;
+  width: 100%;
+  min-width: 375px;
+  max-width: 500px;
+  overflow: hidden;
+}
+.center-container div.mask {
+  filter: opacity(0.5) brightness(0.6);
+  background: white;
+}
+@media screen and (min-height: 812px) {
+  .center-container {
+    height: 812px;
+    top: calc(50% - 812px / 2);
+  }
+}
+@media screen and (min-width: 500px) {
+  .center-container {
+    width: 414px;
+    left: calc(50% - 414px / 2);
+  }
+}
+.full {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.full.fit-body {
+  min-height: 568px;
+  min-width: 375px;
+}
+.img-fit {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inherit;
+}
+.bg-blur {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 2*8px);
+  height: calc(100% + 2*8px);
+  filter: brightness(70%) blur(8px);
+  background-color: black;
+}
+.img-random {
+  background-image: url("https://unsplash.6-79.cn/random/small?quick=1");
+}
+.light-shadow {
+  box-shadow: 1px 3px 10px 0 #c0c0c0;
+}
+.strong-shadow {
+  box-shadow: 1px 3px 10px 0 gray;
+}
+.animate {
+  transition: 0.2s;
+}
+.hover-strong {
+  filter: opacity(0.4);
+}
+.hover-strong:hover {
+  filter: opacity(1);
+}
+.ptr {
+  cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
+}
+.bg {
+  background: #2194f9;
+  z-index: -1;
+}
+div.footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+div.footer img.logo {
+  height: 16px;
+  margin: 0 3px;
+}
+div.main-container {
+  height: calc(100% - 40px);
+  overflow: scroll;
+}
+div.member-container {
+  position: relative;
+  width: 100%;
+  color: white;
+}
+div.member-container div.title {
+  font-size: 20px;
+  width: 100%;
+  background: white;
+  color: #2194f9;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+div.member-container div.title span.eng {
+  font-family: 'COCOGOOSE', serif;
+  margin-left: 10px;
+}
+div.member-container div.member-box div.time {
+  font-family: 'COCOGOOSE', serif;
+  border-left: 3px solid white;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+div.member-container div.member-box div.member-list {
+  font-size: 0;
+}
+div.member-container div.member-box div.member-list div.member-item {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 33.33%;
+  text-align: center;
+}
+div.member-container div.member-box div.member-list div.member-item div.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+div.member-container div.member-box div.member-list div.member-item div.name {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+div.member-container div.member-box div.member-list div.secret {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=base.css.map */
