@@ -177,7 +177,7 @@ div.section-container {
   //}
 
   div.title {
-    font-family: 'jphuaifangti164c030b0f17b98', serif;
+    font-family: 'jphuaifangti164c70ce3917b98', serif;
     font-size: 20px;
     width: 100%;
     background: white;
@@ -240,18 +240,34 @@ div.section-container {
       font-size: 0;
 
       div.event-item {
+        position: relative;
         font-size: 14px;
+        height: 28px;
+
+        span {
+          position: absolute;
+          height: 28px;
+          line-height: 28px;
+          vertical-align: middle;
+        }
 
         span.eng {
           letter-spacing: 2px;
         }
 
-        span.eng.month, span.text {
-          margin-left: 10px;
+        span.eng.month {
+          left: 10px;
+          width: 25px;
+          text-align: right;
         }
 
         span.eng.day {
           color: @blue / 3 + white * 2 / 3;
+          left: 40px;
+        }
+
+        span.text {
+          left: 70px;
         }
       }
     }
