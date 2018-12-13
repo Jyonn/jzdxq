@@ -133,6 +133,21 @@ div.main-container {
   height: calc(100% - 40px);
   overflow: scroll;
 }
+div.section-container.white {
+  background: white;
+  color: #2194f9;
+}
+div.section-container.white div.item div.time {
+  width: 100%;
+  text-align: center;
+}
+div.section-container.white div.item div.text {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
 div.section-container {
   position: relative;
   width: 100%;
