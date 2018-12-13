@@ -60,6 +60,12 @@ body {
   background-repeat: no-repeat;
   display: inherit;
 }
+.img-contain {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inherit;
+}
 .wall-avatar {
   background-image: url("https://image.6-79.cn/jzdxq/wall.jpeg");
 }
@@ -151,12 +157,14 @@ div.section-container div.title.sub {
 }
 div.section-container div.item {
   margin-bottom: 10px;
+  font-size: 0;
 }
 div.section-container div.item div.time {
   font-family: 'COCOGOOSE', serif;
   border-left: 3px solid white;
   padding-left: 10px;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 div.section-container div.item div.member-list {
   font-size: 0;
@@ -307,5 +315,11 @@ div.section-container div.item div.shuoshuo div.go span {
   text-align: center;
   top: calc(50% - 7px);
   color: white;
+}
+div.tshirt {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  max-width: 50%;
 }
 /*# sourceMappingURL=base.css.map */
