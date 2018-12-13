@@ -26,7 +26,7 @@ function get_name(qq) {
 
 function get_readtime(timestamp) {
     const d = new Date(timestamp * 1000);
-    return d.getFullYear() + '年' + d.getMonth() + '月' + d.getDate() + '日 ' + d.getHours() + ':' + d.getMinutes();
+    return d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日 ' + d.getHours() + ':' + d.getMinutes();
 }
 
 function get_link(cellid, qq) {
