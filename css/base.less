@@ -77,6 +77,10 @@ body {
   display: inherit;
 }
 
+.wall-avatar {
+    background-image: url("https://image.6-79.cn/jzdxq/wall.jpeg");
+}
+
 @bg-blur: 8px;
 .bg-blur {
   position: absolute;
@@ -123,9 +127,16 @@ body {
 }
 
 @blue: #2194f9;
+@bluer: @blue * 3 / 4 + black / 4;
+@red: #df0a17;
+@green: #5bbd63;
 .bg {
   background: @blue;
   z-index: -1;
+}
+
+.eng {
+  font-family: 'COCOGOOSE', serif;
 }
 
 @footer-height: 40px;
@@ -160,8 +171,13 @@ div.section-container {
   position: relative;
   width: 100%;
   color: white;
+  //margin-top: 50px;
+  //&:first-child {
+  //  margin-top: 0;
+  //}
+
   div.title {
-    font-family: 'jphuaifangti1646d1809517b98', serif;
+    font-family: 'jphuaifangti164c030b0f17b98', serif;
     font-size: 20px;
     width: 100%;
     background: white;
@@ -169,31 +185,42 @@ div.section-container {
     text-align: center;
     padding: 10px 0;
     margin-bottom: 10px;
+
     span.eng {
-      font-family: 'COCOGOOSE', serif;
       margin-left: 10px;
     }
   }
+
+  div.title.sub {
+    background: @bluer;
+    color: white;
+  }
+
   div.item {
+    margin-bottom: 10px;
     div.time {
       font-family: 'COCOGOOSE', serif;
       border-left: 3px solid white;
       padding-left: 10px;
       margin-bottom: 10px;
     }
+
     div.member-list {
       font-size: 0;
+
       div.member-item {
         display: inline-block;
         margin-bottom: 10px;
         width: 33.33%;
         text-align: center;
         @avatar-size: 60px;
+
         div.avatar {
           width: @avatar-size;
           height: @avatar-size;
           border-radius: @avatar-size / 2;
         }
+
         div.name {
           margin-top: 10px;
           width: 100%;
@@ -201,10 +228,150 @@ div.section-container {
           font-size: 14px;
         }
       }
+
       div.secret {
         margin-bottom: 10px;
         margin-left: 10px;
         font-size: 14px;
+      }
+    }
+
+    div.event-list {
+      font-size: 0;
+
+      div.event-item {
+        font-size: 14px;
+
+        span.eng {
+          letter-spacing: 2px;
+        }
+
+        span.eng.month, span.text {
+          margin-left: 10px;
+        }
+
+        span.eng.day {
+          color: @blue / 3 + white * 2 / 3;
+        }
+      }
+    }
+
+    @shuoshuo-padding: 10px;
+    div.shuoshuo {
+      overflow: hidden;
+      position: relative;
+      width: calc(~'100% - 20px');
+      border-radius: 5px;
+      background: white;
+      padding: @shuoshuo-padding;
+      margin: 0 10px;
+      @header-height: 30px;
+      @left-padding: @header-height + 10px;
+
+      div.header {
+        position: relative;
+        height: @header-height;
+        width: calc(~'100% - @{left-padding}');
+
+        div {
+          display: inline-block;
+        }
+
+        div.wall-avatar {
+          width: @header-height;
+          height: @header-height;
+          border-radius: @header-height / 2;
+        }
+
+        div.usertime {
+          position: absolute;
+          top: 0;
+          left: @left-padding;
+
+          span {
+            position: absolute;
+            width: max-content;
+          }
+
+          span.user {
+            font-weight: bold;
+            font-size: 14px;
+            color: black;
+          }
+
+          span.time {
+            top: 15px;
+            font-size: 12px;
+            color: #888;
+          }
+        }
+      }
+
+      div.content {
+        color: black;
+        font-size: 12px;
+        margin: 10px 0;
+        padding: 0 @left-padding;
+        text-align: justify;
+      }
+
+      @foot-height: 24px;
+
+      div.foot {
+        width: 100%;
+        text-align: right;
+        color: black;
+        font-size: 0;
+        height: @foot-height;
+        padding-right: @left-padding;
+
+        span {
+          display: inline-block;
+          font-size: 12px;
+          height: @foot-height;
+          line-height: @foot-height;
+          vertical-align: middle;
+        }
+
+        span.icon {
+          margin-left: 20px;
+        }
+
+        span.icon-cmt {
+          color: @blue;
+        }
+
+        span.icon-like {
+          color: @red;
+        }
+
+        span.icon-view {
+          color: @green;
+        }
+
+        span.num {
+          font-family: 'COCOGOOSE', serif;
+          margin-left: 5px;
+          color: #888;
+        }
+      }
+
+      div.go {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: @header-height + @shuoshuo-padding;
+        background: #555;
+        //border-radius: 0 5px 5px 0;
+        span {
+          font-size: 14px;
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          top: calc(~'50% - 7px');
+          color: white;
+        }
       }
     }
   }
