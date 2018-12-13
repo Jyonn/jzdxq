@@ -318,8 +318,7 @@ div.section-container div.item div.shuoshuo div.go span {
 }
 div.tshirt {
   display: inline-block;
-  width: 200px;
   height: 200px;
-  max-width: 50%;
+  width: 50%;
 }
 /*# sourceMappingURL=base.css.map */
