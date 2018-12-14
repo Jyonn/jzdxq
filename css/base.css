@@ -138,13 +138,17 @@ div.section-container.white {
   color: #2194f9;
 }
 div.section-container.white div.item div.time {
+  margin-top: 20px;
   width: 100%;
   text-align: center;
+}
+div.section-container.white div.item div.time span {
+  border-top: 2px solid #2194f9;
 }
 div.section-container.white div.item div.text {
   width: 100%;
   text-align: center;
-  color: black;
+  color: #888;
   font-size: 12px;
   padding-bottom: 20px;
 }
@@ -335,6 +339,17 @@ div.tshirt {
   display: inline-block;
   height: 200px;
   width: 50%;
-  margin-top: 10px;
+  margin: 10px 0;
+}
+div.postcard {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+}
+div.postcard:after {
+  content: '样品';
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 80px;
 }
 /*# sourceMappingURL=base.css.map */

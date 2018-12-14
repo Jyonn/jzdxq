@@ -179,13 +179,17 @@ div.section-container.white {
   color: @blue;
   div.item {
     div.time {
+      margin-top: 20px;
       width: 100%;
       text-align: center;
+      span {
+        border-top: 2px solid @blue;
+      }
     }
     div.text {
       width: 100%;
       text-align: center;
-      color: black;
+      color: #888;
       font-size: 12px;
       padding-bottom: 20px;
     }
@@ -424,5 +428,17 @@ div.tshirt {
   display: inline-block;
   height: @tshirt-size;
   width: 50%;
-  margin-top: 10px;
+  margin: 10px 0;
+}
+
+div.postcard {
+  width: 100%;
+  height: @tshirt-size;
+  margin: 10px 0;
+  &:after {
+    content: '样品';
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.3);
+    margin-left: 80px;
+  }
 }
