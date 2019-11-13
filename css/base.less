@@ -13,6 +13,14 @@ html {
   height: 100%;
 }
 
+.head {
+  padding: 0 10px;
+  border-radius: 15px;
+  height: 15px;
+  line-height: 15px;
+  margin: 0 5px;
+}
+
 @page-min-height: 568px;
 @page-min-width: 375px;
 body {
@@ -234,6 +242,26 @@ div.section-container {
       padding-left: 10px;
       margin-bottom: 10px;
       font-size: 16px;
+      color: #eeeeee;
+      strong {
+        color: white;
+      }
+
+      &.modified {
+        &:before {
+          content: '改';
+          background: @red;
+          &:extend(.head);
+        }
+      }
+      &.origin {
+        &:before {
+          content: '原';
+          background: @green;
+          &:extend(.head);
+        }
+        filter: opacity(0.8);
+      }
     }
 
     div.member-list {
