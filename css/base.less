@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  letter-spacing: 2px;
 }
 
 a {
@@ -14,7 +15,7 @@ html {
 }
 
 .head {
-  padding: 0 10px;
+  padding: 0 5px 0 6px;
   border-radius: 15px;
   height: 15px;
   line-height: 15px;
@@ -145,8 +146,10 @@ body {
 @bluer: @blue * 3 / 4 + black / 4;
 @red: #df0a17;
 @green: #5bbd63;
+
+@bg: #f8f8f8;
 .bg {
-  background: @blue;
+  background: @bg;
   z-index: -1;
 }
 
@@ -167,7 +170,7 @@ div.footer {
     height: 16px;
     line-height: 16px;
     vertical-align: middle;
-    color: white;
+    color: @blue;
     margin: 0 3px;
     font-family: Arial, serif;
   }
@@ -217,19 +220,29 @@ div.section-container {
     font-family: 'jphuaifangti16528a972717b98', serif;
     font-size: 20px;
     width: 100%;
-    background: white;
-    color: @blue;
+    background: @bluer;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    //margin-bottom: 10px;
 
     span.eng {
       margin-left: 10px;
     }
   }
 
-  div.title.sub {
+  div.subtitle {
+    font-size: 14px;
+    color: #eee;
+    margin-bottom: 10px;
     background: @bluer;
+    text-align: center;
+    font-family: monospace,serif;
+    padding-bottom: 10px;
+  }
+
+  div.title.sub {
+    background: @blue;
     color: white;
   }
 
@@ -238,19 +251,21 @@ div.section-container {
     font-size: 0;
     div.time {
       font-family: 'COCOGOOSE', serif;
-      border-left: 3px solid white;
+      border-left: 3px solid @blue;
       padding-left: 10px;
       margin-bottom: 10px;
       font-size: 16px;
-      color: #eeeeee;
+      color: #333;
       strong {
-        color: white;
+        color: #111;
       }
 
       &.modified {
         &:before {
           content: '改';
           background: @red;
+          font-size: 12px;
+          color: white;
           &:extend(.head);
         }
       }
@@ -258,7 +273,9 @@ div.section-container {
         &:before {
           content: '原';
           background: @green;
+          font-size: 12px;
           &:extend(.head);
+          color: white;
         }
         filter: opacity(0.8);
       }

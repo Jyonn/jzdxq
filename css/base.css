@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  letter-spacing: 2px;
 }
 a {
   text-decoration: none;
@@ -13,7 +14,7 @@ html {
 .head,
 div.section-container div.item div.time.modified:before,
 div.section-container div.item div.time.origin:before {
-  padding: 0 10px;
+  padding: 0 5px 0 6px;
   border-radius: 15px;
   height: 15px;
   line-height: 15px;
@@ -112,7 +113,7 @@ body {
   visibility: hidden;
 }
 .bg {
-  background: #2194f9;
+  background: #f8f8f8;
   z-index: -1;
 }
 .eng {
@@ -131,7 +132,7 @@ div.footer span.line {
   height: 16px;
   line-height: 16px;
   vertical-align: middle;
-  color: white;
+  color: #2194f9;
   margin: 0 3px;
   font-family: Arial, serif;
 }
@@ -171,17 +172,25 @@ div.section-container div.title {
   font-family: 'jphuaifangti16528a972717b98', serif;
   font-size: 20px;
   width: 100%;
-  background: white;
-  color: #2194f9;
+  background: #196fbb;
+  color: white;
   text-align: center;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  padding-top: 10px;
 }
 div.section-container div.title span.eng {
   margin-left: 10px;
 }
-div.section-container div.title.sub {
+div.section-container div.subtitle {
+  font-size: 14px;
+  color: #eee;
+  margin-bottom: 10px;
   background: #196fbb;
+  text-align: center;
+  font-family: monospace,serif;
+  padding-bottom: 10px;
+}
+div.section-container div.title.sub {
+  background: #2194f9;
   color: white;
 }
 div.section-container div.item {
@@ -190,18 +199,20 @@ div.section-container div.item {
 }
 div.section-container div.item div.time {
   font-family: 'COCOGOOSE', serif;
-  border-left: 3px solid white;
+  border-left: 3px solid #2194f9;
   padding-left: 10px;
   margin-bottom: 10px;
   font-size: 16px;
-  color: #eeeeee;
+  color: #333;
 }
 div.section-container div.item div.time strong {
-  color: white;
+  color: #111;
 }
 div.section-container div.item div.time.modified:before {
   content: '改';
   background: #df0a17;
+  font-size: 12px;
+  color: white;
 }
 div.section-container div.item div.time.origin {
   filter: opacity(0.8);
@@ -209,6 +220,8 @@ div.section-container div.item div.time.origin {
 div.section-container div.item div.time.origin:before {
   content: '原';
   background: #5bbd63;
+  font-size: 12px;
+  color: white;
 }
 div.section-container div.item div.member-list {
   font-size: 0;
