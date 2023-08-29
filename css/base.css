@@ -175,7 +175,8 @@ div.section-container div.title {
   background: #196fbb;
   color: white;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 0;
+  margin-bottom: 10px;
 }
 div.section-container div.title span.eng {
   margin-left: 10px;
@@ -183,6 +184,7 @@ div.section-container div.title span.eng {
 div.section-container div.subtitle {
   font-size: 14px;
   color: #eee;
+  margin-top: -10px;
   margin-bottom: 10px;
   background: #196fbb;
   text-align: center;
